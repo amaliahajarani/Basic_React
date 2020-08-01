@@ -4,11 +4,11 @@
 
 /* making variable so "add" and "delete" button have different color, eventhough they're have the same class (which "header-btn") */
 :root {
-  --main-red-color: #264e70;
+  --main-blue-color: #264e70;
 }
 
-.main-red-color {
-  color: var(--main-red-color);
+.main-blue-color {
+  color: var(--main-blue-color);
 }
 
 html {
@@ -47,6 +47,7 @@ html {
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
@@ -76,6 +77,10 @@ html {
   outline: unset;
 }
 
+.header-btn :active {
+  text-shadow: 1px 1px 2px var(--main-blue-color);
+}
+
 .add {
   padding: 16px;
 }
@@ -92,7 +97,7 @@ html {
 
   flex: 1;
 
-  border-bottom: 1px solid var(--main-red-color);
+  border-bottom: 1px solid var(--main-blue-color);
   outline: unset;
 
   font-family: "Dosis", sans-serif;
@@ -110,4 +115,29 @@ html {
   background: unset;
   border: unset;
   outline: unset;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  position: relative;
+
+  flex: 1 0 auto;
+  text-align: center;
+
+  min-height: 34px;
+  margin: 16px 0 0;
+  font-family: "Dosis", sans-serif;
+  font-size: 24px;
+
+  border-bottom: 1px solid var(--main-blue-color);
+}
+
+.todo-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
